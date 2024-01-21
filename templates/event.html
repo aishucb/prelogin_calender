@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Four Records</title>
+</head>
+<body>
+
+    <h1>Last Four Records</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Time Start</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in range(names|length) %}
+                <tr>
+                    <td>{{ names[i] }}</td>
+                    <td>{{ descriptions[i] }}</td>
+                    <td>{{ timestarts[i] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
